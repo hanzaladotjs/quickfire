@@ -7,7 +7,7 @@ const Request = () => {
     const { theme } = useContext(ThemeContext)
     return (
 
-        <div className="border-3 py-2 w-170 ml-25 mt-5">
+        <div className="border-3 py-2 w-170 ml-25 mt-5 transform hover:scale-105 transition-transform duration-200">
 
             <div className="flex mt-5 mx-10 space-x-5 h-17">
                 <select className="bg-gray-300 text-black w-37 text-xl text-center">
