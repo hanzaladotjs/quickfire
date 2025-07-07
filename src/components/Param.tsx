@@ -26,9 +26,10 @@ const [select, setSelect] = useState<Three>('params');
             </div>
             {select == "params" ? (<div>
             <div className="flex space-x-2 mx-10 my-4 h-12">
-                <input type="text" className="w-62 border-2 border-dotted border-gray-500 focus:outline-none font-mono text-lg" />
-                <input type="text" className="w-63 border-2 border-dotted border-gray-500 focus:outline-none font-mono text-lg"/>
-                <button className="bg-red-400 text-black w-20"> x </button>
+                <input type="text" placeholder="name" className="w-62 pl-2 border-2 border-dotted border-gray-500 focus:outline-none font-mono text-lg" />
+                <input type="text" placeholder="value" className="w-63 pl-2 border-2 border-dotted border-gray-500 focus:outline-none font-mono text-lg"/>
+             <button className="bg-red-400 text-black w-10 h-10 mt-1"> x </button>
+                <input type="checkbox" className="bg-green-400 text-black text-3xl w-10"/>
             </div>
             <div className="justify-center">
                 <button className={theme ? "  transform hover:scale-105 transition-transform duration-200 mx-10 w-150 h-15 border-2 border-dashed border-black mb-5" : "  transform hover:scale-105 transition-transform duration-200 mx-10 w-150 h-15 border-2 border-dashed border-emerald-400 mb-5"}>
@@ -37,17 +38,18 @@ const [select, setSelect] = useState<Three>('params');
             </div>
             </div>) : select=="headers" ? (<div>
             <div className="flex space-x-2 mx-10 my-4 h-12">
-                <input type="text" className="w-62 border-2 border-dotted border-gray-500 focus:outline-none font-mono text-lg" />
-                <input type="text" className="w-63 border-2 border-dotted border-gray-500 focus:outline-none font-mono text-lg"/>
-                <button className="bg-red-400 text-black w-20"> x </button>
+                <input type="text" placeholder='name'className="w-62 border-2 pl-2 border-dotted border-gray-500 focus:outline-none font-mono text-lg" />
+                <input type="text"  placeholder="value" className="w-63 border-2 pl-2 border-dotted border-gray-500 focus:outline-none font-mono text-lg"/>
+                <button className="bg-red-400 text-black w-10 h-10 mt-1"> x </button>
+                     <input type="checkbox" className=" text-3xl w-10"/>
             </div>
             <div className="justify-center">
                 <button className={theme ? "  transform hover:scale-105 transition-transform duration-200 mx-10 w-150 h-15 border-2 border-dashed border-black mb-5" : "  transform hover:scale-105 transition-transform duration-200 mx-10 w-150 h-15 border-2 border-dashed border-emerald-400 mb-5"}>
-                    ADD PARAMETER
+                    ADD HEADERS
                 </button>
             </div>
-            </div>) : (<div className="mx-10 my-4 w-150 border-3 border-gray-400 h-100 p-0 flex justify-start items-start">
-                <input type="text" className="h-full w-full  flex justify-start items-start text-start p-0" />
+            </div>) : (<div className="mx-10 my-4 w-150 border-3 border-gray-400 h-100 p-0  ">
+                <input type="text" className="h-full w-full text-left p-2" />
             </div>)}
         </div>
     )
