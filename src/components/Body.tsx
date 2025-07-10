@@ -4,7 +4,7 @@ import Request from "./Request"
 
 const Body = () => {
     return (
-        <div className="flex space-x-10">
+        <div className="flex md:flex-row flex-col space-x-10">
             <div className="flex flex-col space-y-7">
                 <Request/>
                 <Param/>
