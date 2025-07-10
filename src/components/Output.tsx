@@ -15,8 +15,8 @@ const Output = () => {
                     <h2 className="text-lg text-gray-500 "> RESPONSE DATA </h2>
                 </div>
             </div>
-            <div className="border-3 border-gray-400 w-190 mx-10 mb-5 h-full  text-sm  p-5 font-mono ">
-{JSON.stringify(logic.response)}
+            <div className="border-3  overflow-auto border-gray-400 w-180 mx-10 mb-5 h-full   text-xs pl-2 pt-2 font-mono ">
+<pre >   {JSON.stringify(logic.response,null,2)}</pre>
             </div>
         </div>
     )

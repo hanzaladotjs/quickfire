@@ -113,8 +113,8 @@ const Param = () => {
             </div>
             {select == "params" ? (<div>
                 {params.map((param, index) => (<div key={index} className="flex space-x-2 mx-10 my-4 h-12">
-                    <input type="text" value={param.key} onChange= { (e) => setParamKey(e, index)}placeholder="name" className="w-62 pl-2 border-2 border-dotted border-gray-500 focus:outline-none font-mono text-lg" />
-                    <input type="text" value={param.value} onChange= { (e) => setParamValue(e, index)} placeholder="value" className="w-63 pl-2 border-2 border-dotted border-gray-500 focus:outline-none font-mono text-lg" />
+                    <input type="text" value={param.key} onChange= { (e) => setParamKey(e, index)}placeholder="name" className="w-62 pl-2 border-2 border-dotted border-gray-500 placeholder-gray-400 focus:outline-none font-mono text-lg" />
+                    <input type="text" value={param.value} onChange= { (e) => setParamValue(e, index)} placeholder="value" className="w-63 pl-2 border-2 border-dotted border-gray-500 placeholder-gray-400  focus:outline-none font-mono text-lg" />
                     <button className="bg-red-400 text-black w-10 h-10 mt-1" onClick={() => {deleteParam(index)}}> x </button>
                     <input type="checkbox" onChange={(e) => handleCheckParams(e,index) } checked={param.enabled}  className="bg-green-400 text-black text-3xl w-10" />
                 </div>))}
@@ -126,8 +126,8 @@ const Param = () => {
             </div>) : select == "headers" ? (<div>
 
                 {headers.map((header, index) => (<div key={index} className="flex space-x-2 mx-10 my-4 h-12">
-                    <input type="text" onChange={(e) => setHeaderKey(e, index)} value={header.key} placeholder="name" className="w-62 pl-2 border-2 border-dotted border-gray-500 focus:outline-none font-mono text-lg" />
-                    <input type="text"  onChange={(e) => setHeaderValue(e, index)} value={header.value} placeholder="value" className="w-63 pl-2 border-2 border-dotted border-gray-500 focus:outline-none font-mono text-lg" />
+                    <input type="text" onChange={(e) => setHeaderKey(e, index)} value={header.key} placeholder="name" className="w-62 pl-2 border-2 border-dotted  border-gray-500 focus:outline-none placeholder-gray-400  font-mono text-lg" />
+                    <input type="text"  onChange={(e) => setHeaderValue(e, index)} value={header.value} placeholder="value" className="w-63 pl-2 border-2 border-dotted  border-gray-500  focus:outline-none  placeholder-gray-400 font-mono text-lg" />
                     <button className="bg-red-400 text-black w-10 h-10 mt-1" onClick={() => {deleteHeader(index)}}> x </button>
                     <input type="checkbox"  checked={header.enabled} onChange= {(e) => handleCheckHeaders(e, index)} className="bg-green-400 text-black text-3xl w-10" />
                 </div>))}
@@ -136,8 +136,8 @@ const Param = () => {
                         ADD HEADERS
                     </button>
                 </div>
-            </div>) : (<div className="mx-10 my-4 w-150 border-3 border-gray-400 h-100 p-0  ">
-                <textarea className="h-full w-full text-left p-2 font-mono text-sm bg-gray-200" value={logic.body} onChange={(e) => setLogic((prev) => ({...prev, body: e.target.value}))} />
+            </div>) : (<div className={theme ? "mx-10 my-4 w-150  border-3 border-gray-400 h-100 p-0 hover:border-black " : "mx-10 my-4 w-150  border-3 border-gray-400 h-100 p-0 hover:border-white " }>
+                <textarea className="h-full w-full text-left p-2 font-mono focus:outline-none  text-sm" value={logic.body} onChange={(e) => setLogic((prev) => ({...prev, body: e.target.value}))} />
             </div>)}
         </div>
     )

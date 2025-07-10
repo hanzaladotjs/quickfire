@@ -11,7 +11,7 @@ const Request = () => {
     const {setLogic, logic} = useContext(LogicContext)
     return (
 
-        <div className="border-4 border-gray-600 py-2 md:w-170 w-80 ml-25 mt-8 transform hover:scale-105 transition-transform duration-200">
+        <div className="border-4 border-gray-600 py-2 md:w-170 w-80 ml-25 mt-6 transform hover:scale-105 transition-transform duration-200">
 
             <div className="flex mt-5 mx-10 space-x-5 h-17">
                 {/* <select className="bg-gray-300 text-black w-30 text-xl text-center">
@@ -20,8 +20,8 @@ const Request = () => {
                     <option value="put">PUT</option>
                     <option value="delete" >DELETE</option></select> */}
                   <DropdownMenuRadioGroupDemo/>
-                <input type="text" value={logic.url} onChange={(e) => setLogic((prev) => ({...prev, url: e.target.value}))} placeholder="https://api.example.com/endpoint" className={theme ? "border-3 text-lg pl-1 placeholder-sm w-120 border-gray-400 font-mono hover:border-black focus:outline-none focus:ring-0"
-                    : "border-3 w-130 border-gray-400 hover:border-emerald-400 focus:outline-none placeholder-gray-600 pl-1 text-lg font-mono focus:ring-0"} />
+                <input type="text" value={logic.url} onChange={(e) => setLogic((prev) => ({...prev, url: e.target.value}))} placeholder="https://api.example.com/endpoint" className={theme ? "border-3 text-sm pl-1 placeholder-sm w-120 border-gray-400 font-mono hover:border-black focus:outline-none focus:ring-0"
+                    : "border-3 w-130 border-gray-400 hover:border-emerald-400 text-gray-200 focus:outline-none placeholder-gray-600 pl-1 text-sm font-mono focus:ring-0"} />
             </div>
 
             <button onClick={() => {
