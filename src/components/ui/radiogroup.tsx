@@ -44,10 +44,10 @@ export default function DropdownMenuRadioGroupDemo() {
 
                 <DropdownMenuGroup>
 
-                    <DropdownMenuRadioItem value="get" className="bg-green-400 text-black" onClick={() => {setLabel("GET");   setLogic(prev => ({ ...prev, reqType: "GET" }));} }>GET</DropdownMenuRadioItem>
-                    <DropdownMenuRadioItem value="post" className="bg-blue-400 text-black" onClick={() => {setLabel("POST");   setLogic(prev => ({ ...prev, reqType: "POST" })); }}>POST</DropdownMenuRadioItem>
-                    <DropdownMenuRadioItem value="put" className="bg-yellow-400 text-black" onClick={() => {setLabel("PUT");   setLogic(prev => ({ ...prev, reqType: "PUT" }));}}> PUT</DropdownMenuRadioItem>
-                      <DropdownMenuRadioItem value="delete" className="bg-red-400 text-black" onClick={() =>{ setLabel("DELETE");   setLogic(prev => ({ ...prev, reqType: "DELETE" }));}}> DELETE</DropdownMenuRadioItem>
+                    <DropdownMenuRadioItem value="get" className="bg-green-400 text-black" onClick={() => {setLabel("GET");   setLogic((prev) => ({ ...prev, reqType: "GET" }));} }>GET</DropdownMenuRadioItem>
+                    <DropdownMenuRadioItem value="post" className="bg-blue-400 text-black" onClick={() => {setLabel("POST");   setLogic((prev)=> ({ ...prev, reqType: "POST" })); }}>POST</DropdownMenuRadioItem>
+                    <DropdownMenuRadioItem value="put" className="bg-yellow-400 text-black" onClick={() => {setLabel("PUT");   setLogic((prev) => ({ ...prev, reqType: "PUT" }));}}> PUT</DropdownMenuRadioItem>
+                      <DropdownMenuRadioItem value="delete" className="bg-red-400 text-black" onClick={() =>{ setLabel("DELETE");   setLogic((prev) => ({ ...prev, reqType: "DELETE" }));}}> DELETE</DropdownMenuRadioItem>
                     
 
                 </DropdownMenuGroup>

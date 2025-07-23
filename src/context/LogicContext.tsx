@@ -10,7 +10,7 @@ interface LogicObject {
     params: Array<Object>,
     headers: Array<Object>,
     body: string,
-    response: string
+    response: any
 }
 
 interface LogicContextType {
@@ -20,7 +20,7 @@ interface LogicContextType {
 
 export const LogicContext = createContext<LogicContextType>({
   logic: {
-    reqType: "GET",
+    reqType: "",
     url: "",
     params: [],
     headers: [],
